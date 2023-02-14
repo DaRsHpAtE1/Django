@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Area Circumference Of Circle</title>
+    <style>
+        *{font-size: 40px;
+        background-color: beige;
+        font-family: Tahoma;
+        font-weight: 300;}
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Area And Circumference Of A Circle Using Django</h1>
+        <form method="post">
+            {% csrf_token %}
+            <input type="number" 
+            placeholder="Enter Number"
+            step="any"
+            required
+            min="0.1"
+            name="radius"
+            />
+            <br></br>
+            <input type="submit" value="Find"/>
+        </form>
+                {{msg}}
+    </center>
+</body>
+</html>
