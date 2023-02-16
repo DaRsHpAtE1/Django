@@ -1,0 +1,28 @@
+{% load static %}
+<html lang="en">
+<head>
+    <title>Grade App</title>
+    <link rel="stylesheet" href="{% static 'index.css' %}"/>
+    <script src="{% static 'index.js' %}"></script>
+</head>
+<body>
+    <center>
+        <h1>Grade App By Darsh Patel</h1>
+        <form method="post" onsubmit="return check()">
+            {% csrf_token %}
+            <input type="number"
+                name="marks"
+                placeholder="Enter Marks"
+                id="marks"/>
+            <br/>
+            <br/>
+            <input type="submit"
+                value="Find Grade"/>
+        </form>
+        
+            <div class="msg"/>
+            
+                {{msg}}
+    </center>
+</body>
+</html>
