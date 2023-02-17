@@ -15,4 +15,4 @@ def grade(request):
         return render(request,"index.html",{"msg":msg})
     else:
         return render(request,"index.html")
-    
+        
