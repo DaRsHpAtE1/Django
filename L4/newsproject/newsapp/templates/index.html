@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C Tracker</title>
+    <style>
+        h1 {
+    font-family: verdana;
+    font-size: 50px;
+    font-weight: bolder;
+    color: rgb(1, 1, 1);
+  }
+  input {
+    font-family: verdana;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: #000;
+    border: 1px solid #ccc;
+    
+  }
+  input[type="submit"] {
+    background-color: #1d0a51;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  .msg{
+    font-family: verdana;
+    font-size: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    border-color: #000;
+    background-color: #fff;
+    color: rgb(7, 29, 7);
+    width: 30%;
+  }
+  body{
+      background-color:rgb(205, 224, 242);
+  }
+  input[type="radio"]{
+    width: 3em;
+    height: 2rem;
+    accent-color: #6C5B7B;
+    font-size: large;
+    accent-color: darkblue;
+  }
+  label{
+    font-size: 40px;
+    font-family: verdana;
+    font-weight: 555;
+  }
+
+    </style>
+    </head>
+  <body>
+    <center>
+      <h1>News App By D021_Darsh_Patel</h1>
+      <form action="">
+        <input type="radio" name="country" value="IN" /> <label/>India <br/><br/>
+        <input type="radio" name="country" value="US" /> <label/>USA <br /><br />
+        <input type="submit" value="Find News!" />
+      </form>
+      <div class="msg">
+        {{news}}
+      </div>
+    </center>
+ </body>
+</html>

@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypto Live Tracker</title>
+    <style>
+        h1 {
+    font-family: verdana;
+    font-size: 50px;
+    font-weight: bolder;
+    color: rgb(1, 1, 1);
+  }
+  input {
+    font-family: verdana;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: #000;
+    border: 1px solid #ccc;
+    
+  }
+  input[type="submit"] {
+    background-color: #1d0a51;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  .msg{
+    font-family: verdana;
+    font-size: 30px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    border-color: #000;
+    background-color: #fff;
+    color: rgb(7, 29, 7);
+    width: 30%;
+  }
+  body{
+      background-color:#d5d2be;
+  }
+
+    </style>
+    </head>
+  <body>
+    <center>
+      <h1>Crypto App By D021_Darsh_Patel</h1>
+      <form action="">
+        <input type="radio" name="crypto" value="btc" /> Bitcoin
+        <input type="radio" name="crypto" value="eth" /> Ethereum
+        <br/><br/>
+        <input type="submit" value="Find!" />
+      </form>
+      <br />
+      <div class="msg">
+        {{price}}
+      </div>
+    </center>
+ </body>
+</html>
