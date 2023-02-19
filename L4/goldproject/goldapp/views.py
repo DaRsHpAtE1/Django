@@ -3,14 +3,13 @@ import requests
 
 # Create your views here.
 def gold(request):
-    if requests.GET.get('gold'):
-        gold = requests.GET.get("gold")
+    if request.GET.get('gold'):
+        gold = request.GET.get("gold")
         gold = gold.upper()
-        key='f79bbb9bb7fae1a8f00ec425645ac1b5'
-        url = 'https://api.metalpriceapi.com/v1/latest?api_key={key}'
+        url = 'https://metals-api.com/api/latest?access_key=cso6kd4dpua9357b49cj28dq91j4gojja4o8c3ccf96i9wzdalyza4a8vuw6'
         response = requests.get(url)
         data = response.json()
-        rate = data['base'][gold]
+        rate = data['INR'][gold]
         rate = f'Price of {gold} is {rate}'
         return render(request,'index.html',{'rate':rate})
     else:
