@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <style>
+        h1 {
+    font-family: verdana;
+    font-size: 50px;
+    font-weight: bolder;
+    color: white
+        }
+        input[type="submit"] {
+    background-color: #1d0a51;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  .msg{
+    font-family: verdana;
+    font-size: 30px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    border-color: #000;
+    background-color: #fff;
+    color: rgb(7, 29, 7);
+    width: 30%;
+  }
+  body{
+      background-color:rgb(21, 18, 88);
+  }
+  table{
+    font-size: 30px;
+    color: white;
+  }
+  a{
+    font-family: verdana;
+    font-size: 30px;
+    color: white;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: red;
+  }
+  h2{
+    font-family: verdana;
+    font-size: 30px;
+    color: white;
+  }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Student Management By D021_Darsh_Patel</h1>
+        <br>
+        <h2>Home Page</h2>
+        <a href="{% url 'create' %}">Create Student</a>
+        <table border="5" style="width: 50%;">
+            <tr>
+                <th>Rno</th>
+                <th>Name</th>
+                <th>Marks</th>
+                <th>Delete</th>
+            </tr>
+            {% for d in data %}
+            <tr>
+                <td>{{ d.rno }}</td>
+                <td>{{ d.name }}</td>
+                <td>{{ d.marks }}</td>
+                <td><a href="{% url 'remove' id=d.rno %}" onclick="return confirm('Delete This Record Permanently?')">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
