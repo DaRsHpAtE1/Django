@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>College Management System</title>
     <style>
         body{
@@ -22,7 +25,7 @@
     
   }
   input[type="submit"] {
-    background-color: #635b78;
+    background-color: #2b048e;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -54,31 +57,27 @@
     text-decoration-style: solid;
     text-decoration-color: rgb(128, 79, 197);
 }
+.nav{background-color: rgb(64, 7, 104); }
+.nav a{color: rgb(253, 247, 247);}
     </style>
 </head>
 <body>
     <center>
-        <div class="nav">
-        <a href="{% url 'home' %}">Home</a>
-        <a href="{% url 'dept' %}">Department</a>
-        <a href="{% url 'stu' %}">Student</a>
-        <h1>Department Page</h1>
-        <a href="{% url 'adddept' %}">Add Department</a>
-        <br>
-        <table border="5" style="width: 50%; text-align: center;">
-        <tr>
-            <th>Dept id</th>
-            <th>Dept Name</th>
-            <th>Delete</th>
-        </tr>
-        {% for d in data %}
-        <tr>
-            <td>{{ d.did }}</td>
-            <td>{{ d.dname }}</td>
-            <td><a href="{% url 'remdept' id=d.did %}" onclick="return confirm('Are You Sure You Want To Delete?')">Delete</a></td>
-        </tr>
-        {% endfor %}
-        </table>
+        <div class = 'nav'>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'dept' %}">Department</a>
+            <a href="{% url 'stu' %}">Student</a>
+        </div>
+        <h1>Add Student Page</h1>
+        <form method="post">
+            {% csrf_token %}
+            <table>
+                {{ fm.as_table }}
+            </table>
+            <br>
+            <input type="submit" value="Add Student">
+        </form>
+        {{ msg }}
     </center>
 </body>
 </html>

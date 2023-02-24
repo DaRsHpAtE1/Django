@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>College Management System</title>
     <style>
         body{
@@ -59,26 +62,28 @@
 <body>
     <center>
         <div class="nav">
-        <a href="{% url 'home' %}">Home</a>
-        <a href="{% url 'dept' %}">Department</a>
-        <a href="{% url 'stu' %}">Student</a>
-        <h1>Department Page</h1>
-        <a href="{% url 'adddept' %}">Add Department</a>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'dept' %}">Department</a>
+            <a href="{% url 'stu' %}">Student</a>
+        </div>
+        <h1>Student Page</h1>
+        <a href="{% url 'addstu' %}">Add Student</a>
         <br>
         <table border="5" style="width: 50%; text-align: center;">
-        <tr>
-            <th>Dept id</th>
-            <th>Dept Name</th>
-            <th>Delete</th>
-        </tr>
-        {% for d in data %}
-        <tr>
-            <td>{{ d.did }}</td>
-            <td>{{ d.dname }}</td>
-            <td><a href="{% url 'remdept' id=d.did %}" onclick="return confirm('Are You Sure You Want To Delete?')">Delete</a></td>
-        </tr>
-        {% endfor %}
-        </table>
+            <tr>
+                <th>Rno</th>
+                <th>Student Name</th>
+                <th>Department</th>
+                <th>Delete</th>
+            </tr>
+            {% for d in data %}
+            <tr>
+                <td>{{ d.rno }}</td>
+                <td>{{ d.name }}</td>
+                <td>{{ d.dept }}</td>
+                <td><a href="{% url 'remstu' id=d.rno %}" onclick="return confirm('Are You Sure You Want To Delete?')">Delete</a></td>
+            </tr>
+            {% endfor %}
     </center>
 </body>
 </html>

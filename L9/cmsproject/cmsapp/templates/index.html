@@ -2,11 +2,69 @@
 <html lang="en">
 <head>
     <title>College Management System</title>
+    <style>
+        body{
+      background-color:rgb(88, 155, 196);
+  }
+  h1 {
+    font-family: verdana;
+    font-size: 50px;
+    font-weight: bolder;
+    color: white
+  }
+  input {
+    font-family: verdana;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: #000;
+    border: 1px solid #ccc;
+    
+  }
+  input[type="submit"] {
+    background-color: #635b78;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  .msg{
+    font-family: verdana;
+    font-size: 30px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    border-color: #000;
+    background-color: #fff;
+    color: rgb(7, 29, 7);
+    width: 30%;
+  }
+  body{
+      background-color:rgb(128, 79, 197);
+  }
+  table{
+    font-size: 30px;
+    color: white;
+  }
+  a{
+    font-family: verdana;
+    font-size: 30px;
+    color: white;
+    
+    
+}
+.nav{background-color: rgb(64, 7, 104); margin: 6%;}
+.nav a{color: rgb(253, 247, 247);}
+    </style>
 </head>
 <body>
     <center>
+        <div class="nav">
         <a href="{% url 'home' %}">Home</a>
         <a href="{% url 'dept' %}">Department</a>
+        <a href="{% url 'stu' %}">Student</a>
+        </div>
+        <h1>Home Page</h1>
     </center>
 </body>
 </html>
