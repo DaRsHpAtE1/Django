@@ -1,4 +1,4 @@
-"""scanproject URL Configuration
+"""jeepproject URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from japp.views import home,m,fj,jonga,m3
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',home,name='home'),
+    path('m/',m,name='m'),
+    path('fj/',fj,name='fj'),
+    path('jonga/',jonga,name='jonga'),
+    path('m3/',m3,name='m3'),
 ]
