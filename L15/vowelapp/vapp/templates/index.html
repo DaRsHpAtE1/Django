@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VC Counter App</title>
+    <style>
+h1 {
+    font-family: verdana;
+    font-size: 50px;
+    font-weight: bolder;
+    color: white;
+  }
+  input {
+    font-family: verdana;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: #000;
+    border: 1px solid #ccc;
+    
+  }
+  input[type="submit"] {
+    background-color: #74619d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  .msg{
+    font-family: verdana;
+    font-size: 30px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    border-color: #000;
+    background-color: #fff;
+    color: rgb(7, 29, 7);
+    width: 30%;
+  }
+  body{
+      background-color:rgb(28, 13, 48);
+  }
+  textarea {
+  width: 40%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+    </style>
+    <meta name = 'viewport' content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <center>
+        <h1>VC Counter App</h1>
+        <form>
+            <textarea name ='txt' placeholder="Enter your text here" cols="40" rows="10" required></textarea>
+            <br><br>
+            <input type="submit" value="Count">
+        </form>
+        <div class="msg">{{msg}}</div>
+    </center>
+</body>
+</html>
