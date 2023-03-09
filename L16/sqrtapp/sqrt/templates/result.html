@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Square Root App</title>
+        <style>
+h1 {
+    font-family: verdana;
+    font-size: 50px;
+    font-weight: bolder;
+    color: #110333
+  }
+  input {
+    font-family: verdana;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: #000;
+    border: 1px solid #ccc;
+    
+  }
+  input[type="submit"] {
+    background-color: #110333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  .msg{
+    font-family: verdana;
+    font-size: 30px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    border-color: #000;
+    background-color: #fff;
+    color: rgb(7, 29, 7);
+    width: 30%;
+  }
+  body{
+      background-color:rgb(61, 81, 196);
+  }
+        </style>
+    </head>
+    <body>
+        <center>
+            <h1>{{msg}}</h1>
+            <a href="{% url 'home' %}">Home</a>
+        </center>
+    </body>
+</html>
