@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Square Root Finder</title>
+    <style>
+                h1 {
+    font-family: verdana;
+    font-size: 50px;
+    font-weight: bolder;
+    color: whitesmoke;
+  }
+  input {
+    font-family: verdana;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: #000;
+    border: 1px solid #ccc;
+    
+  }
+  input[type="submit"] {
+    background-color: #110333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  .msg{
+    font-family: verdana;
+    font-size: 30px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    border-color: #000;
+    background-color: #fff;
+    color: rgb(7, 29, 7);
+    width: 30%;
+  }
+  body{
+      background-color:rgb(132, 18, 81);
+  }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Sqaure Finder</h1>
+        <form>
+            <input type="number" placeholder="Enter A Number"
+            name="num" step="any" required/>
+            <br></br>
+            <input type="submit" value="Find"/>
+        </form>
+              <div class="msg">{{msg}}</div>  
+    </center>
+</body>
+</html>
