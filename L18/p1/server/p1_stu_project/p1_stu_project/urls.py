@@ -1,4 +1,4 @@
-"""p1_date_project URL Configuration
+"""p1_stu_project URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -15,10 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from dateapp.views import dt, ti, dtti
+from p1_stu_app.views import stuop
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('dt', dt),
-    path('ti', ti),
-    path('dtti',dtti)
+    path('stuop', stuop)
 ]
